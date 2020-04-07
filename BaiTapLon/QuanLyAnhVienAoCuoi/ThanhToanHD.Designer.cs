@@ -52,6 +52,9 @@
             this.btnChiTietThanhToan = new System.Windows.Forms.Button();
             this.txtNgayThanhToan = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ThanhToanHD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,7 +232,7 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnXoa.Location = new System.Drawing.Point(141, 344);
+            this.btnXoa.Location = new System.Drawing.Point(317, 344);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 17;
@@ -240,7 +243,7 @@
             // btnChiTietThanhToan
             // 
             this.btnChiTietThanhToan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnChiTietThanhToan.Location = new System.Drawing.Point(250, 344);
+            this.btnChiTietThanhToan.Location = new System.Drawing.Point(529, 344);
             this.btnChiTietThanhToan.Name = "btnChiTietThanhToan";
             this.btnChiTietThanhToan.Size = new System.Drawing.Size(127, 23);
             this.btnChiTietThanhToan.TabIndex = 18;
@@ -266,11 +269,47 @@
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThem.Location = new System.Drawing.Point(130, 344);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 21;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSua.Location = new System.Drawing.Point(223, 344);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 22;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHuy.Location = new System.Drawing.Point(412, 344);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.TabIndex = 23;
+            this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // ThanhToanHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtNgayThanhToan);
             this.Controls.Add(this.btnChiTietThanhToan);
@@ -324,5 +363,8 @@
         private System.Windows.Forms.Button btnChiTietThanhToan;
         private System.Windows.Forms.TextBox txtNgayThanhToan;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

@@ -42,8 +42,8 @@ create table SanPham
 	MaMau varchar(10) not null,
 	MaNoiSX varchar(10) not null,
 	SoLuong int,
-	DonGiaNhap money,
-	DonGiaThue money,
+	DonGiaNhap int,
+	DonGiaThue int,
 	MaLoaiSP varchar(10) not null
 )
 
@@ -57,15 +57,15 @@ create table HoaDonNhap
 	NgayNhap datetime,
 	MaNV varchar(10) not null,
 	MaNCC varchar(10) not null,
-	TongTien money
+	TongTien int
 )
 
 create table ChiTietHDN
 (	MaHDN varchar(10) not null,
 	MaSP varchar(10) not null,
 	SoLuong int,
-	DonGia money,
-	ThanhTien money,
+	DonGia int,
+	ThanhTien int,
 	constraint PK_ChiTietHDN primary key (MaHDN, MaSP)
 )
 
@@ -75,7 +75,7 @@ create table HopDong
 	MaNV varchar(10) not null,
 	NgayHD datetime,
 	KhuyenMai int,
-	TamUng money
+	TamUng int
 )
 
 create table ChiTietHDong
@@ -87,24 +87,23 @@ create table ChiTietHDong
 	constraint PK_ChiTietHDong primary key (MaHD,MaSP)
 )
 
-
 create table ThanhToanHD
 (	MaThanhToan varchar(10) primary key not null,
 	MaHD varchar(10) not null,
 	MaNV varchar(10) not null,
-	NgayThanhToan datetime,
-	TongTien money,
-	SoTienThanhToan money
+	NgayThanhToan date,
+	TongTien int,
+	SoTienThanhToan int
 )
+drop table ThanhToanHD
 
 create table ChiTietThanhToan
 (	MaThanhToan varchar(10) not null,
 	MaSP varchar(10) not null,
 	NgayTra date,
-	ThanhTien money,
+	ThanhTien int,
 	constraint PK_ChiTietThanhToan primary key (MaThanhToan, MaSP)
 )
-
 
 create table NhanVien
 (	MaNV varchar(10) primary key not null,
@@ -145,4 +144,6 @@ insert into HopDong(MaHD,MaKhach,MaNV, NgayHD, KhuyenMai,TamUng)
 values ('HD01', 'KH01', 'NV01', '3/31/2020', 0, 500000)
 insert into HopDong(MaHD,MaKhach,MaNV, NgayHD, KhuyenMai,TamUng)
 values ('HD02', 'KH01', 'NV01', '3/31/2020', 0, 0)
+
+
 

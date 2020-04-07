@@ -39,6 +39,15 @@ namespace QuanLyAnhVienAoCuoi
             txtTongTien.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["TongTien"].Value.ToString();
         }
 
+        private void resetvalue()
+        {
+            txtMaThanhToan.Text = "";
+            txtMaHD.Text = "";
+            txtMaNV.Text = "";
+            txtNgayThanhToan.Text = "";
+            txtTongTien.Text = "";
+        }
+
         private void btnTinh_Click(object sender, EventArgs e)
         {
             double tt, tu,tien;
@@ -46,7 +55,10 @@ namespace QuanLyAnhVienAoCuoi
             tu= Convert.ToDouble(Functions.GetFieldValues("select TamUng from HopDong where MaHD='" + txtMaHD.Text+"'"));
             tien = tt - tu;
             txtSoTienThanhToan.Text = tien.ToString();
-
+            string sql = "update ThanhToanHD set SoTienThanhToan='" + txtSoTienThanhToan.Text + "'where MaThanhToan='" + txtMaThanhToan.Text + "'";
+            Functions.Runsql(sql);
+            loadDataToGridView();
+            resetvalue();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -71,9 +83,48 @@ namespace QuanLyAnhVienAoCuoi
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string sql = "update ThanhToanHD set SoTienThanhToan='" + txtSoTienThanhToan.Text + "'where MaThanhToan='" + txtMaThanhToan.Text + "'";
+            if (txtMaThanhToan.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập mã thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMaThanhToan.Focus();
+            }
+            string sql = "insert into ThanhToanHD(MaThanhToan, MaHD, MaNV, NgayThanhToan, TongTien) values" +
+                "('" + txtMaThanhToan.Text.Trim() + "','" + txtMaHD.Text.Trim() + "','" + txtMaNV.Text.Trim() + "','" + txtNgayThanhToan.Text.Trim() +
+                "','" + txtTongTien.Text.Trim() + "')";
             Functions.Runsql(sql);
             loadDataToGridView();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnXoa.Enabled = false;
+            btnChiTietThanhToan.Enabled = false;
+            btnSua.Enabled = false;
+            resetvalue();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string sql = "update ThanhToanHD set MaHD='" + txtMaHD.Text.Trim().ToString() + "',MaNV='" + txtMaNV.Text.Trim().ToString() +
+                "',NgayThanhToan='" + txtNgayThanhToan.Text + "',TongTien='" + txtTongTien.Text.Trim().ToString() + "'where MaThanhToan='" +
+                txtMaThanhToan.Text + "'";
+            Functions.Runsql(sql);
+            loadDataToGridView();
+            resetvalue();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            resetvalue();
+            btnHuy.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnChiTietThanhToan.Enabled = true;
+            btnSua.Enabled = true;
+
         }
     }
 }

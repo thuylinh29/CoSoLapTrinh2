@@ -62,6 +62,8 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTimKiemSanPham = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_SP)).BeginInit();
             this.SuspendLayout();
@@ -323,7 +325,7 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLuu.Location = new System.Drawing.Point(12, 353);
+            this.btnLuu.Location = new System.Drawing.Point(91, 353);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(57, 23);
             this.btnLuu.TabIndex = 23;
@@ -334,7 +336,7 @@
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSua.Location = new System.Drawing.Point(106, 353);
+            this.btnSua.Location = new System.Drawing.Point(188, 353);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(57, 23);
             this.btnSua.TabIndex = 24;
@@ -345,7 +347,7 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnXoa.Location = new System.Drawing.Point(207, 353);
+            this.btnXoa.Location = new System.Drawing.Point(286, 353);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(57, 23);
             this.btnXoa.TabIndex = 25;
@@ -356,7 +358,7 @@
             // btnTimKiemSanPham
             // 
             this.btnTimKiemSanPham.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTimKiemSanPham.Location = new System.Drawing.Point(309, 353);
+            this.btnTimKiemSanPham.Location = new System.Drawing.Point(515, 353);
             this.btnTimKiemSanPham.Name = "btnTimKiemSanPham";
             this.btnTimKiemSanPham.Size = new System.Drawing.Size(114, 23);
             this.btnTimKiemSanPham.TabIndex = 26;
@@ -364,11 +366,35 @@
             this.btnTimKiemSanPham.UseVisualStyleBackColor = false;
             this.btnTimKiemSanPham.Click += new System.EventHandler(this.btnTimKiemSanPham_Click);
             // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThem.Location = new System.Drawing.Point(12, 353);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(57, 23);
+            this.btnThem.TabIndex = 27;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHuy.Location = new System.Drawing.Point(373, 353);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(57, 23);
+            this.btnHuy.TabIndex = 28;
+            this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiemSanPham);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -441,5 +467,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnTimKiemSanPham;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

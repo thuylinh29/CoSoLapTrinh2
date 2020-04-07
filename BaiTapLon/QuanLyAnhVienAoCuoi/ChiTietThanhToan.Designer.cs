@@ -52,6 +52,7 @@
             this.txtMaThanhToan = new System.Windows.Forms.TextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ChiTietTT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyAnhVienAoCuoiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thanhToanHDBindingSource)).BeginInit();
@@ -153,7 +154,7 @@
             // bntThanhTien
             // 
             this.bntThanhTien.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bntThanhTien.Location = new System.Drawing.Point(29, 300);
+            this.bntThanhTien.Location = new System.Drawing.Point(26, 300);
             this.bntThanhTien.Name = "bntThanhTien";
             this.bntThanhTien.Size = new System.Drawing.Size(75, 23);
             this.bntThanhTien.TabIndex = 9;
@@ -229,7 +230,7 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnXoa.Location = new System.Drawing.Point(219, 300);
+            this.btnXoa.Location = new System.Drawing.Point(313, 300);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 19;
@@ -240,7 +241,7 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLuu.Location = new System.Drawing.Point(123, 300);
+            this.btnLuu.Location = new System.Drawing.Point(120, 300);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 20;
@@ -248,11 +249,23 @@
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSua.Location = new System.Drawing.Point(221, 300);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 22;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // frmChiTietThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.txtMaThanhToan);
@@ -304,5 +317,6 @@
         private System.Windows.Forms.TextBox txtMaThanhToan;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnSua;
     }
 }

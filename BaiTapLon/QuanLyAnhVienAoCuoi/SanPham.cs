@@ -94,5 +94,37 @@ namespace QuanLyAnhVienAoCuoi
             TimKiemSanPham open = new TimKiemSanPham();
             open.ShowDialog();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnTimKiemSanPham.Enabled = false;
+            resetvalue();
+        }
+
+
+        private void resetvalue()
+        {
+            txtMaSP.Text = "";
+            txtTenSP.Text = "";
+            txtSoLuong.Text = "";
+            txtMaMau.Text = "";
+            txtMaNoiSX.Text = "";
+            txtDonGiaNhap.Text = "";
+            txtDonGiaThue.Text = "";
+            txtMaLoaiSP.Text = "";
+
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            btnHuy.Enabled = false;
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnTimKiemSanPham.Enabled = true;
+        }
     }
 }

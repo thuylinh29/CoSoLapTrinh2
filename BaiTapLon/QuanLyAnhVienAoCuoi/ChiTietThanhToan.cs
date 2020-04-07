@@ -82,6 +82,14 @@ namespace QuanLyAnhVienAoCuoi
             Functions.Runsql(sql);
             loadDataToGridView();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string sql = "update ChiTietThanhToan set MaSP='" + txtMaSP.Text.Trim().ToString() + "',NgayTra='" + txtNgayTra.Text + "'where MaThanhToan='" + txtMaThanhToan.Text + "'";
+            Functions.Runsql(sql);
+            loadDataToGridView();
+
+        }
     }
 }
 

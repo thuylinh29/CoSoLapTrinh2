@@ -1,12 +1,12 @@
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\bin\Debug\QuanLyAnhVienAoCuoi.exe.config
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\bin\Debug\QuanLyAnhVienAoCuoi.exe
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\bin\Debug\QuanLyAnhVienAoCuoi.pdb
-C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.csprojAssemblyReference.cache
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.frmChiTietThanhToan.resources
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.Properties.Resources.resources
+C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.SanPham.resources
+C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.ThanhToanHD.resources
+C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.TimKiemSanPham.resources
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.csproj.GenerateResource.cache
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.exe
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.pdb
-C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.TimKiemSanPham.resources
-C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.SanPham.resources
-C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.ThanhToanHD.resources
+C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.csprojAssemblyReference.cache
