@@ -35,8 +35,9 @@ namespace QuanLyAnhVienAoCuoi
             txtMaThanhToan.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["MaThanhToan"].Value.ToString();
             txtMaHD.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["MaHD"].Value.ToString();
             txtMaNV.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["MaNV"].Value.ToString();
-            txtNgayThanhToan.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["NgayThanhToan"].Value.ToString();
+            mskNgayThanhToan.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["NgayThanhToan"].Value.ToString();
             txtTongTien.Text = DataGridView_ThanhToanHD.CurrentRow.Cells["TongTien"].Value.ToString();
+           
         }
 
         private void resetvalue()
@@ -44,7 +45,7 @@ namespace QuanLyAnhVienAoCuoi
             txtMaThanhToan.Text = "";
             txtMaHD.Text = "";
             txtMaNV.Text = "";
-            txtNgayThanhToan.Text = "";
+            mskNgayThanhToan.Text = "";
             txtTongTien.Text = "";
         }
 
@@ -64,6 +65,7 @@ namespace QuanLyAnhVienAoCuoi
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -89,7 +91,7 @@ namespace QuanLyAnhVienAoCuoi
                 txtMaThanhToan.Focus();
             }
             string sql = "insert into ThanhToanHD(MaThanhToan, MaHD, MaNV, NgayThanhToan, TongTien) values" +
-                "('" + txtMaThanhToan.Text.Trim() + "','" + txtMaHD.Text.Trim() + "','" + txtMaNV.Text.Trim() + "','" + txtNgayThanhToan.Text.Trim() +
+                "('" + txtMaThanhToan.Text.Trim() + "','" + txtMaHD.Text.Trim() + "','" + txtMaNV.Text.Trim() + "','" + mskNgayThanhToan.Text.Trim() +
                 "','" + txtTongTien.Text.Trim() + "')";
             Functions.Runsql(sql);
             loadDataToGridView();
@@ -109,7 +111,7 @@ namespace QuanLyAnhVienAoCuoi
         private void btnSua_Click(object sender, EventArgs e)
         {
             string sql = "update ThanhToanHD set MaHD='" + txtMaHD.Text.Trim().ToString() + "',MaNV='" + txtMaNV.Text.Trim().ToString() +
-                "',NgayThanhToan='" + txtNgayThanhToan.Text + "',TongTien='" + txtTongTien.Text.Trim().ToString() + "'where MaThanhToan='" +
+                "',NgayThanhToan='" + mskNgayThanhToan.Text + "',TongTien='" + txtTongTien.Text.Trim().ToString() + "'where MaThanhToan='" +
                 txtMaThanhToan.Text + "'";
             Functions.Runsql(sql);
             loadDataToGridView();

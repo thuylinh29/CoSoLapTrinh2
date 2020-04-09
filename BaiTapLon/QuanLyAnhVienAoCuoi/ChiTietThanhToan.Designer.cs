@@ -42,9 +42,7 @@
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bntThanhTien = new System.Windows.Forms.Button();
             this.bntThoat = new System.Windows.Forms.Button();
-            this.txtNgayThue = new System.Windows.Forms.TextBox();
             this.lblNgayTra = new System.Windows.Forms.Label();
-            this.txtNgayTra = new System.Windows.Forms.TextBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.quanLyAnhVienAoCuoiDataSet = new QuanLyAnhVienAoCuoi.QuanLyAnhVienAoCuoiDataSet();
             this.thanhToanHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -53,6 +51,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.mskNgayThue = new System.Windows.Forms.MaskedTextBox();
+            this.mskNgayTra = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ChiTietTT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyAnhVienAoCuoiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thanhToanHDBindingSource)).BeginInit();
@@ -175,13 +175,6 @@
             this.bntThoat.UseVisualStyleBackColor = false;
             this.bntThoat.Click += new System.EventHandler(this.bntThoat_Click);
             // 
-            // txtNgayThue
-            // 
-            this.txtNgayThue.Location = new System.Drawing.Point(462, 3);
-            this.txtNgayThue.Name = "txtNgayThue";
-            this.txtNgayThue.Size = new System.Drawing.Size(253, 20);
-            this.txtNgayThue.TabIndex = 13;
-            // 
             // lblNgayTra
             // 
             this.lblNgayTra.AutoSize = true;
@@ -191,13 +184,6 @@
             this.lblNgayTra.Size = new System.Drawing.Size(49, 15);
             this.lblNgayTra.TabIndex = 14;
             this.lblNgayTra.Text = "Ngày trả";
-            // 
-            // txtNgayTra
-            // 
-            this.txtNgayTra.Location = new System.Drawing.Point(462, 44);
-            this.txtNgayTra.Name = "txtNgayTra";
-            this.txtNgayTra.Size = new System.Drawing.Size(253, 20);
-            this.txtNgayTra.TabIndex = 15;
             // 
             // txtMaSP
             // 
@@ -260,18 +246,36 @@
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
+            // mskNgayThue
+            // 
+            this.mskNgayThue.Location = new System.Drawing.Point(462, 4);
+            this.mskNgayThue.Mask = "00/00/0000";
+            this.mskNgayThue.Name = "mskNgayThue";
+            this.mskNgayThue.Size = new System.Drawing.Size(253, 20);
+            this.mskNgayThue.TabIndex = 23;
+            this.mskNgayThue.ValidatingType = typeof(System.DateTime);
+            // 
+            // mskNgayTra
+            // 
+            this.mskNgayTra.Location = new System.Drawing.Point(462, 42);
+            this.mskNgayTra.Mask = "00/00/0000";
+            this.mskNgayTra.Name = "mskNgayTra";
+            this.mskNgayTra.Size = new System.Drawing.Size(253, 20);
+            this.mskNgayTra.TabIndex = 24;
+            this.mskNgayTra.ValidatingType = typeof(System.DateTime);
+            // 
             // frmChiTietThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mskNgayTra);
+            this.Controls.Add(this.mskNgayThue);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.txtMaThanhToan);
-            this.Controls.Add(this.txtNgayTra);
             this.Controls.Add(this.lblNgayTra);
-            this.Controls.Add(this.txtNgayThue);
             this.Controls.Add(this.bntThoat);
             this.Controls.Add(this.bntThanhTien);
             this.Controls.Add(this.DataGridView_ChiTietTT);
@@ -305,9 +309,7 @@
         private QuanLyAnhVienAoCuoiDataSet quanLyAnhVienAoCuoiDataSet;
         private System.Windows.Forms.BindingSource thanhToanHDBindingSource;
         private QuanLyAnhVienAoCuoiDataSetTableAdapters.ThanhToanHDTableAdapter thanhToanHDTableAdapter;
-        private System.Windows.Forms.TextBox txtNgayThue;
         private System.Windows.Forms.Label lblNgayTra;
-        private System.Windows.Forms.TextBox txtNgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayThue;
@@ -318,5 +320,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.MaskedTextBox mskNgayThue;
+        private System.Windows.Forms.MaskedTextBox mskNgayTra;
     }
 }

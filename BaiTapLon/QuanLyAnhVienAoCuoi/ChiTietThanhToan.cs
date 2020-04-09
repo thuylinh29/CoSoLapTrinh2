@@ -44,8 +44,8 @@ namespace QuanLyAnhVienAoCuoi
             
             txtMaSP.Text = DataGridView_ChiTietTT.CurrentRow.Cells["MaSP"].Value.ToString();
             txtMaThanhToan.Text = DataGridView_ChiTietTT.CurrentRow.Cells["MaThanhToan"].Value.ToString();
-            txtNgayThue.Text = DataGridView_ChiTietTT.CurrentRow.Cells["NgayThue"].Value.ToString();
-            txtNgayTra.Text = DataGridView_ChiTietTT.CurrentRow.Cells["NgayTra"].Value.ToString();
+            mskNgayThue.Text = DataGridView_ChiTietTT.CurrentRow.Cells["NgayThue"].Value.ToString();
+            mskNgayTra.Text = DataGridView_ChiTietTT.CurrentRow.Cells["NgayTra"].Value.ToString();
         }
 
         private void bntThoat_Click(object sender, EventArgs e)
@@ -55,8 +55,8 @@ namespace QuanLyAnhVienAoCuoi
 
         private void bntThanhTien_Click(object sender, EventArgs e)
         { 
-            DateTime ngaytra = Convert.ToDateTime(txtNgayTra.Text);
-            DateTime ngaythue = Convert.ToDateTime(txtNgayThue.Text);
+            DateTime ngaytra = Convert.ToDateTime(mskNgayTra.Text);
+            DateTime ngaythue = Convert.ToDateTime(mskNgayThue.Text);
             TimeSpan time = ngaytra - ngaythue;
             int Tongsongay = time.Days ;
             double tt, dgt;
@@ -85,7 +85,7 @@ namespace QuanLyAnhVienAoCuoi
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string sql = "update ChiTietThanhToan set MaSP='" + txtMaSP.Text.Trim().ToString() + "',NgayTra='" + txtNgayTra.Text + "'where MaThanhToan='" + txtMaThanhToan.Text + "'";
+            string sql = "update ChiTietThanhToan set  NgayTra='" + mskNgayTra.Text + "'where MaThanhToan='" + txtMaThanhToan.Text + "'";
             Functions.Runsql(sql);
             loadDataToGridView();
 

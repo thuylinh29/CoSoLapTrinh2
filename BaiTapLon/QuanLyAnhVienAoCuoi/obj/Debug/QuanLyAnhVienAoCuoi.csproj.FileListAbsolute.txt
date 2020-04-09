@@ -10,3 +10,4 @@ C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.csp
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.exe
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.pdb
 C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.csprojAssemblyReference.cache
+C:\gitexample\QuanLyAoCuoi\QuanLyAnhVienAoCuoi\obj\Debug\QuanLyAnhVienAoCuoi.HopDong.resources

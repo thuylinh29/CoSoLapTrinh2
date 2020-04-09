@@ -50,11 +50,11 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnChiTietThanhToan = new System.Windows.Forms.Button();
-            this.txtNgayThanhToan = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.mskNgayThanhToan = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_ThanhToanHD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,6 +221,7 @@
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(713, 344);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
@@ -250,13 +251,6 @@
             this.btnChiTietThanhToan.Text = "Chi tiết thanh toán";
             this.btnChiTietThanhToan.UseVisualStyleBackColor = false;
             this.btnChiTietThanhToan.Click += new System.EventHandler(this.btnChiTietThanhToan_Click);
-            // 
-            // txtNgayThanhToan
-            // 
-            this.txtNgayThanhToan.Location = new System.Drawing.Point(480, 12);
-            this.txtNgayThanhToan.Name = "txtNgayThanhToan";
-            this.txtNgayThanhToan.Size = new System.Drawing.Size(233, 20);
-            this.txtNgayThanhToan.TabIndex = 19;
             // 
             // btnLuu
             // 
@@ -302,16 +296,25 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // mskNgayThanhToan
+            // 
+            this.mskNgayThanhToan.Location = new System.Drawing.Point(480, 13);
+            this.mskNgayThanhToan.Mask = "00/00/0000";
+            this.mskNgayThanhToan.Name = "mskNgayThanhToan";
+            this.mskNgayThanhToan.Size = new System.Drawing.Size(233, 20);
+            this.mskNgayThanhToan.TabIndex = 24;
+            this.mskNgayThanhToan.ValidatingType = typeof(System.DateTime);
+            // 
             // ThanhToanHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mskNgayThanhToan);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtNgayThanhToan);
             this.Controls.Add(this.btnChiTietThanhToan);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThoat);
@@ -361,10 +364,10 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnChiTietThanhToan;
-        private System.Windows.Forms.TextBox txtNgayThanhToan;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.MaskedTextBox mskNgayThanhToan;
     }
 }
