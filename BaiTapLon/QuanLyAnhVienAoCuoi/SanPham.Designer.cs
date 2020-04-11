@@ -186,6 +186,7 @@
             this.txtDonGiaNhap.Name = "txtDonGiaNhap";
             this.txtDonGiaNhap.Size = new System.Drawing.Size(190, 20);
             this.txtDonGiaNhap.TabIndex = 13;
+            this.txtDonGiaNhap.TextChanged += new System.EventHandler(this.txtDonGiaNhap_TextChanged);
             // 
             // txtMaMau
             // 

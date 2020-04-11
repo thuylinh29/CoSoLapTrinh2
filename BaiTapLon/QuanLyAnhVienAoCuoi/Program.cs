@@ -15,7 +15,7 @@ namespace QuanLyAnhVienAoCuoi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChiTietThanhToan());
+            Application.Run(new SanPham());
         }
     }
 }

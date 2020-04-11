@@ -62,6 +62,7 @@ namespace QuanLyAnhVienAoCuoi
             string sql = "insert into SanPham values ('" + txtMaSP.Text.Trim() + "','" + txtTenSP.Text.Trim() + "','" + txtAnh.Text +
                 "','" + txtMaMau.Text.Trim() + "','" + txtMaNoiSX.Text.Trim() + "','" + txtSoLuong.Text.Trim() + "','" + txtDonGiaNhap.Text + "','" +
                 txtDonGiaThue.Text + "','" + txtMaLoaiSP.Text.Trim() + "')";
+
             Functions.Runsql(sql);
             loadDataToGridView();
                 
@@ -125,6 +126,16 @@ namespace QuanLyAnhVienAoCuoi
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnTimKiemSanPham.Enabled = true;
+        }
+
+        private void txtDonGiaNhap_TextChanged(object sender, EventArgs e)
+        {
+            double dgn, dgt;
+            if (txtDonGiaNhap.Text == "") dgn = 0;
+            else dgn = Convert.ToDouble(txtDonGiaNhap.Text);
+            dgt = dgn * 0.5;
+            txtDonGiaThue.Text = dgt.ToString();
+            loadDataToGridView();
         }
     }
 }
